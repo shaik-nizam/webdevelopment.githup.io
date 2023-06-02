@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>birthday card</title>
+    <style media="screen">
+      body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #073b4c;
+      }
+    .birthdaycard{
+      position:relative;
+      width: 250px;
+      height: 350;
+      cursor:pointer;
+      transform-style: preserve-3d;
+      transform: perspective(2500px);
+      transition: 1s;
+    }
+    .birthdaycard:hover{
+      transform: perspective(2500px) rotate(5deg);
+      box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2), 0 10px 100px rgba(0,0,0,0.4);
+    }
+    .birthdaycard:hover .cardfont{
+      transform: rotatey(-160deg);
+    }
+    .birthdaycard:hover .happy{
+      visibility: hidden;
+
+    }
+    .cardfont{
+      position: relative;
+      background-color: #fff;
+      width: 250px;
+      height: 350px;
+      overflow: hidden;
+      transform-origin: left;
+      box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2), 30px 0 50px rgba(0,0,0,0.4);
+      transition: 0.6s;
+    }
+    .happy{
+      font-family: sans-serif;
+      text-align: center;
+      margin: 30px;
+      background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+      transition: 0.1s;
+    }
+    .ballon{
+      position: absolute;
+    }
+    .ballon1, .ballon2, .ballon3, .ballon4{
+      position: absolute;
+      width: 85px;
+      height: 95px;
+      border-radius: 50%;
+    }
+    .ballon1{
+      background-color: rgba(239, 71, 111, 0.7);
+      left: -10px;
+      top: 50px;
+    }
+    .ballon2{
+      background-color: rgba(6, 214, 160, 0.7);
+      left: 50px;
+      top: 20px;
+    }
+    .ballon3{
+      background-color: rgba(255, 209, 102, 0.7);
+      left: 110px;
+      top: 50px;
+    }
+    .ballon4{
+      background-color: rgba(17, 138, 178, 0.7);
+      left: 170px;
+      top: 50px;
+    }
+    .ballon1:before, .ballon2:before, .ballon3:before, .ballon4:before{
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 155px;
+      background-color: #ffd166;
+      top: 95px;
+      left: 43px;
+    }
+    .ballon1:after, .ballon2:after, .ballon3:after, .ballon4:after{
+      content: "";
+      position: absolute;
+      border-right: 7px solid transparent;
+      border-left:  7px solid transparent;
+      top: 94px;
+      left: 37px;
+    }
+    .ballon1:after{
+      border-bottom: 10px solid #ef476f;
+    }
+    .ballon2:after{
+      border-bottom: 10px solid #06d6a0;
+    }
+    .ballon3:after{
+      border-bottom: 10px solid #ffd166;
+    }
+    .ballon4:after{
+      border-bottom: 10px solid #118ab2;
+    }
+    .cardinside{
+      position: absolute;
+      background-color: #fff;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 350px;
+      box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
+      z-index: -1;
+    }
+    p{
+      font-family: 'brush script MT' cursive;
+      margin: 40px;
+      color: #333;
+    }
+    .name{
+      position: absolute;
+      left: 150px;
+      top: 200px;
+      color: #333;
+    }
+    .back{
+      font-family: tahoma, sans-serif;
+      color: #333;
+      text-align: center;
+      margin: 30px;
+      outline-color: #333;
+      outline-style: dotted;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="birthdaycard">
+      <div class="cardfont">
+        <h3 class="happy">HAPPY birthday!</h3>
+        <div class="ballon">
+          <div class="ballon1"></div>
+          <div class="ballon2"></div>
+          <div class="ballon3"></div>
+          <div class="ballon4"></div>
+    </div>
+  </div>
+  <div class="cardinside">
+    <h3 class="back">HAPPY BIRTHDAY!</h3>
+    <p>Dear friend</p>
+  <p>To my best friend forever. let's celebrate growing old together! here's
+  hoping that you have the most wonderful birthday ever.</p>
+<p class="name">nizam</p>
+</div>
+</div>
+
+
+  </body>
+</html>
